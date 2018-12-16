@@ -16,7 +16,8 @@ public class SimpleEnemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (cooldown == 0) {
-			for (int i = 0; i < 20; ++i) {
+			direction += Mathf.PI / 6;
+			for (int i = 0; i < 10; ++i) {
 				var spawnedBullet = Instantiate(bullet);
 				var velocity = new Vector3(Mathf.Cos(direction), Mathf.Sin(direction), 0);
 				spawnedBullet.updatePos = (BulletScript updatingBullet) => {
