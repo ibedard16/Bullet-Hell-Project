@@ -17,4 +17,20 @@ public class ControlScript : MonoBehaviour {
 
 		transform.Translate(xAxis, yAxis, 0);
 	}
+
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		Debug.Log("collided with bullet (hopefully)", this);
+	}
+
+	// void OnTriggerStay2D (Collider2D other)
+	// {
+	// 	Debug.Log("collided with bullet (hopefully)", this);
+	// }
+
+	// void OnCollisionStay2D (Collision2D other)
+	// {
+	// 	Debug.Log("collided with bullet (hopefully)", this);
+	// }
+
 }
